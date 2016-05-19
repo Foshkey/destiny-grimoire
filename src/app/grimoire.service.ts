@@ -1,0 +1,22 @@
+import { Injectable } from '@angular/core';
+import { Http, Headers, Response } from '@angular/http';
+
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+
+import { Grimoire } from './models/grimoire'
+
+@Injectable()
+export class GrimoireService {
+  
+  grimoire: Grimoire;
+  
+  private grimoireUrl = 'grimoire.json'; // TODO: Create Proxy Server
+
+  constructor(private http: Http) {
+    http.get(this.grimoireUrl)
+        .map(response => response.json().Response)
+        .subscribe(grimoire => this.grimoire = grimoire);
+  }
+
+}

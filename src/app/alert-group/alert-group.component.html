@@ -1,0 +1,7 @@
+<alert *ngFor="let alert of alertGroupService.alerts;let i = index"
+       [type]="alert.type"
+       dismissible="true"
+       [dismissOnTimeout]="dismissTimeout"
+       (close)="alertGroupService.dismissAlert(i)">
+  {{ alert?.message }}
+</alert>
