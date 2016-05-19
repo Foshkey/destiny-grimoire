@@ -29,7 +29,7 @@ And install all node dependencies:
 npm install
 ```
 
-Finally, run the default cli serve:
+Finally, run the default cli serve using Adminstrator rights:
 
 ```bash
 ng serve

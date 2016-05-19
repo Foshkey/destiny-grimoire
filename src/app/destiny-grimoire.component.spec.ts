@@ -14,9 +14,4 @@ describe('App: DestinyGrimoire', () => {
       inject([DestinyGrimoireAppComponent], (app: DestinyGrimoireAppComponent) => {
     expect(app).toBeTruthy();
   }));
-
-  it('should have as title \'destiny-grimoire works!\'',
-      inject([DestinyGrimoireAppComponent], (app: DestinyGrimoireAppComponent) => {
-    expect(app.title).toEqual('destiny-grimoire works!');
-  }));
 });
