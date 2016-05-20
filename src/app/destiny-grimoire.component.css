@@ -1,5 +1,8 @@
 .standard-card {
     margin-bottom: 12em;
+}
+
+.standard-card::after {
     content: '';
     display: table;
     clear: both;
