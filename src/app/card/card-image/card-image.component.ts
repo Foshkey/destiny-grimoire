@@ -11,10 +11,16 @@ import { Card } from '../../models/card';
 export class CardImageComponent implements OnInit {
 
   @Input() card: Card;
+  
+  private bungiePath = "https://www.bungie.net/"
 
   constructor() {}
 
   ngOnInit() {
+  }
+  
+  getSmallImagePath() {
+    return this.bungiePath + this.card.highResolution.image.sheetPath;
   }
 
 }

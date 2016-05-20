@@ -1,8 +1,11 @@
-<h2 [innerHtml]="card.cardName + ' | <small>' + card.points + ' Points</small>'"></h2>
-<blockquote *ngIf="card.cardIntro" [innerHtml]="card.cardIntro"></blockquote>
-<hr />
+<h2>
+  <span [innerHtml]="card.cardName"></span> <span class="title-separator">| </span>
+  <small>{{card.points}} Points</small>
+</h2>
+<blockquote class="intro" *ngIf="card.cardIntro" [innerHtml]="card.cardIntro"></blockquote>
+<app-card-image [card]="card"></app-card-image>
 <p [innerHtml]="card.cardDescription"></p>
-<div *ngIf="card.unlockHowToText">
+<!--<div *ngIf="card.unlockHowToText">
   <hr />
   <p>{{ card?.unlockHowToText }}</p>
-</div>
+</div>-->
