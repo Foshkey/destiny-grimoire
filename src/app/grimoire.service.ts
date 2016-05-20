@@ -16,8 +16,8 @@ export class GrimoireService {
 
   constructor(private http: Http) {
     http.get(this.grimoireUrl)
-        .map(response => response.json().Response)
-        .subscribe(grimoire => this.grimoire = grimoire);
+        .map(response => response.json())
+        .subscribe((apiResponse: BungieApiResponse<Grimoire>) => this.grimoire = apiResponse.Response);
   }
 
 }

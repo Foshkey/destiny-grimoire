@@ -40,6 +40,8 @@ const barrels: string[] = [
   'app/alert',
   'app/alert-group',
   'app/test',
+  'app/card',
+  'app/card/card-image',
   /** @cli-barrel */
 ];
 

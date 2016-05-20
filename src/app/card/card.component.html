@@ -1,0 +1,8 @@
+<h2 [innerHtml]="card.cardName + ' | <small>' + card.points + ' Points</small>'"></h2>
+<blockquote *ngIf="card.cardIntro" [innerHtml]="card.cardIntro"></blockquote>
+<hr />
+<p [innerHtml]="card.cardDescription"></p>
+<div *ngIf="card.unlockHowToText">
+  <hr />
+  <p>{{ card?.unlockHowToText }}</p>
+</div>

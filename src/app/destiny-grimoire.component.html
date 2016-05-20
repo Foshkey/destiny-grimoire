@@ -1,4 +1,11 @@
 <h1>Destiny Grimoire</h1>
 <h3>A work in progress</h3>
 <app-alert-group></app-alert-group>
-<pre>{{grimoireService.grimoire | json}}</pre>
+<div *ngFor="let theme of grimoireService.grimoire?.themeCollection">
+  <div *ngFor="let page of theme.pageCollection">
+    <div *ngFor="let card of page.cardCollection" class="standard-card">
+      <app-card [card]="card"></app-card>
+    </div>
+  </div>
+</div>
+<!--<pre>{{grimoireService.grimoire | json}}</pre>-->
