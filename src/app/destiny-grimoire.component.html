@@ -1,6 +1,16 @@
-<h1>Destiny Grimoire</h1>
-<hr />
+<h1>
+  Destiny Grimoire
+  <span class="foshkey-link"><a target="_blank" href="http://foshkey.github.io">Foshkey</a></span>
+</h1>
+<hr class="site-title-separator" />
+
+<div class="loading-text" *ngIf="!grimoireService.grimoire">
+  <h2>Loading Grimoire...</h2>
+  <p>This will take some time as we load in the entire Destiny Grimoire. Please wait while we work on this.</p>
+</div>
+
 <app-alert-group></app-alert-group>
+
 <div *ngFor="let theme of grimoireService.grimoire?.themeCollection">
   <div *ngFor="let page of theme.pageCollection">
     <div *ngFor="let card of page.cardCollection" class="standard-card">
