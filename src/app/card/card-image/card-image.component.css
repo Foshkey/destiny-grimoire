@@ -1,4 +1,5 @@
 .card-thumbnail {
+  float: left;
   width: 12em;
   padding-right: 1em;
   padding-bottom: 1em;
